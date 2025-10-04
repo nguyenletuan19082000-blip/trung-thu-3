@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -97,7 +97,8 @@ DOCTYPE html>
         </div>
 
         <!-- Khu vực lời chúc với hiệu ứng gõ chữ -->
-        <div id="message-container" class="space-y-4 text-lg md:text-xl font-medium min-h-[150px] text-gray-200">
+        <!-- ĐÃ THÊM text-center để căn lề giữa -->
+        <div id="message-container" class="space-y-4 text-lg md:text-xl font-medium min-h-[150px] text-gray-200 text-center">
             <p id="line1" class="text-pink-300"></p>
             <p id="line2" class="text-sky-300"></p>
             <p id="line3" class="text-emerald-300"></p>
@@ -110,13 +111,14 @@ DOCTYPE html>
     <script>
         // --- Cấu hình và Logic JavaScript ---
         
-        // Dữ liệu các dòng chữ cần in ra và màu sắc tương ứng (GIỮ NGUYÊN LỜI CHÚC CỦA TUẤN)
+        // Dữ liệu các dòng chữ cần in ra và màu sắc tương ứng 
         const messages = [
-            { id: 'line1', text: '✨ Sắp tới Trung Thu rồi! Tuấn chúc Phương có một mùa Trung Thu thật vui vẻ và ấm áp.', delay: 70 },
+            { id: 'line1', text: '✨ Sắp tới Trung Thu rồi! chúc Phương có một mùa Trung Thu thật vui vẻ và ấm áp.', delay: 70 },
             { id: 'line2', text: 'Chúc Phương có tất cả, trừ buồn bã. Phải luôn nhớ giữ gìn sức khỏe nha.', delay: 70 },
             { id: 'line3', text: 'Phương hong được suy nghĩ tiêu cực và suy nghĩ tùm lum đâu nha. Luôn cười tươi nhé! 😊', delay: 70 },
-            { id: 'line4', text: 'Tuấn cũng xin lỗi vì không có món quà vật chất nào cho Phương.', delay: 70 },
-            { id: 'line5', text: '🎁 Tuấn làm cái này thay cho món quà đặc biệt gửi tặng Phương! ⭐ Chúc Phương Đoàn Viên trọn vẹn! ⭐', delay: 40, skipCursor: true }
+            { id: 'line4', text: ' xin lỗi vì không có món quà vật chất nào cho Phương.', delay: 70 },
+            // ĐÃ CẮT BỎ CỤM "⭐ Chúc Phương Đoàn Viên trọn vẹn! ⭐" THEO YÊU CẦU
+            { id: 'line5', text: '🎁 Làm cái này thay cho món quà đặc biệt gửi tặng Phương!', delay: 40, skipCursor: true }
         ];
 
         /**
